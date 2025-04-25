@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HOLA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+  
+<body>
+    <div id="contenedor">
+    <h1>TABLA DE PAGO DE CUOTAS</h1>
+    <div id="ignorar">
+        <input type="text" id="balance" autocomplete="off" placeholder="PRESTAMO">
+        <input type="text" id="interestPorcent" autocomplete="off" placeholder="INTERES ANUAL">
+        <input type="text" id="time" autocomplete="off" placeholder="TIEMPO DE PRESTAMO"> 
+        <select id="fixedOrVariable">
+            <option value="1">Interes Variable</option>
+            <option value="0">Interes Fijo</option>
+        </select>  
+        <button id="buttonCalculate">Calcular</button>
+        <button onclick="exportarPDF()">Exportar a PDF</button>
+    </div>
+    <table id="table">
+        <tr>
+            <th>Mes</th>
+            <th>Interés</th>
+            <th>Pago Capital</th>
+            <th>Cuota Mes</th>
+            <th>Saldo</th>
+        </tr>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
